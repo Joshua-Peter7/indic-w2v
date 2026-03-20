@@ -10,7 +10,7 @@ errors = []
 def check(label, cond, detail=""):
     if cond:
         print(f"  {PASS}  {label}")
-    else
+    else:
         print(f"  {FAIL}  {label}  {detail}")
         errors.append(label)
 
@@ -38,9 +38,7 @@ for lang in ["tamil", "hindi", "telugu", "malayalam"]:
         warnings.simplefilter("always")
         audio = load_audio(path)
     check(f"{lang}: sample_rate == 16000", audio["sample_rate"] == 16000)
-    check(f"{lang}: waveform is 1D", audio["waveform"].ndim == 1)
-    check(f"{lang}: dtype == float32", str(audio["waveform"].dtype) == "float32")
-    check(f"{lang}: duration > 0", audio["duration_sec"] > 0)
+    check(f"{la
     print(f"         audio_id={audio['audio_id']}  dur={audio['duration_sec']:.2f}s")
 
 # ------------------------------------------------------------------
