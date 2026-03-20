@@ -10,7 +10,7 @@ errors = []
 def check(label, cond, detail=""):
     if cond:
         print(f"  {PASS}  {label}")
-    else:
+    else
         print(f"  {FAIL}  {label}  {detail}")
         errors.append(label)
 
